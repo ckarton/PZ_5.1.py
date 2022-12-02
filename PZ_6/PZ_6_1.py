@@ -15,7 +15,7 @@ try:
     for i in range(L, N):
         sum += a[i]
 
-    c = sum / (())
+    c = sum / len(sum)
     print(c)
 except:
     print("Перезагрузите или попробуте позже")
