@@ -2,9 +2,8 @@ from math import sqrt
 
 N = 3
 
-
-x = [1, 4, 3]
-y = [-1, 1, 0]
+a = [1, -4, 3]
+b = [-1, 1, 0]
 
 def da(x,y):
     a = 0
@@ -21,3 +20,5 @@ def da(x,y):
         if all(j < 0 for j in y):
             return "0 0"
     return a,b
+
+print(da(a, b))
