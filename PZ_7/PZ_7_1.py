@@ -1,4 +1,4 @@
-a = int(input('Введите целое положительное число: '))
+a = input('Введите целое положительное число: ')
 print("a = ",a)
-s = list(str(a))
-print(s[::-1])
+x = [int(b) for b in str(a)]
+print(sum(x))
