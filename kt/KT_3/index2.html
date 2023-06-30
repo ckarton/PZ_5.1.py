@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Форма взаимодействия с пользователем</title>
+    <script>
+        function showWarning() {
+            var name = document.getElementById("name").value;
+            alert("Внимательно вводите свое имя, " + name + "!");
+        }
+
+        function showChoice() {
+            var iceCreamChecked = document.getElementById("iceCream").checked;
+            var chocolateChecked = document.getElementById("chocolate").checked;
+
+            if (iceCreamChecked && !chocolateChecked) {
+                alert("Вы выбрали мороженое!");
+            } else if (!iceCreamChecked && chocolateChecked) {
+                alert("Вы выбрали шоколад!");
+            } else if (!iceCreamChecked && !chocolateChecked) {
+                alert("Вы не выбрали ничего!");
+            } else if (iceCreamChecked && chocolateChecked) {
+                alert("Вы выбрали мороженое и шоколад!");
+            }
+        }
+        function showThanks() {
+            alert("Спасибо, что приняли участие в опросе!");
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="name">Введите имя:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="iceCream">Мороженое:</label>
+        <input type="checkbox" id="iceCream" name="iceCream"><br>
+
+        <label for="chocolate">Шоколад:</label>
+        <input type="checkbox" id="chocolate" name="chocolate"><br>
+
+        <button type="button" onclick="showWarning(); showChoice(); showThanks();">Отправить</button>
+    </form>
+</body>
+
+</html>

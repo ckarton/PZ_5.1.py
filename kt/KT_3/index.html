@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Форма aform</title>
+    <script>
+        function showResult() {
+            var shape = document.getElementById("shape").value;
+            var color = document.getElementById("color").value;
+            var length = document.getElementById("length").value;
+
+            var message = "Мне нравится " + shape + " цвета " + color + "\n";
+            message += "Длина которого " + length;
+
+            alert(message);
+        }
+    </script>
+</head>
+
+<body>
+    <form id="aform">
+        <label for="shape">Геометрическая фигура:</label>
+        <input type="text" id="shape" name="shape" required><br>
+
+        <label for="color">Цвет:</label>
+        <input type="text" id="color" name="color" required><br>
+
+        <label for="length">Длина фигуры:</label>
+        <input type="text" id="length" name="length" required><br>
+
+        <button type="button" onclick="showResult()">Отправить</button>
+    </form>
+</body>
+
+</html>
