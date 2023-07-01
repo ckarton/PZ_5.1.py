@@ -7,7 +7,7 @@
         function showResult() {
             var shape = document.getElementById("shape").value;
             var color = document.getElementById("color").value;
-            var length = document.getElementById("length").value;
+            var length = shape.length
 
             var message = "Мне нравится " + shape + " цвета " + color + "\n";
             message += "Длина которого " + length;
@@ -24,9 +24,6 @@
 
         <label for="color">Цвет:</label>
         <input type="text" id="color" name="color" required><br>
-
-        <label for="length">Длина фигуры:</label>
-        <input type="text" id="length" name="length" required><br>
 
         <button type="button" onclick="showResult()">Отправить</button>
     </form>
