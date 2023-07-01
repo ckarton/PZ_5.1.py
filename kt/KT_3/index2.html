@@ -4,11 +4,6 @@
 <head>
     <title>Форма взаимодействия с пользователем</title>
     <script>
-        function showWarning() {
-            var name = document.getElementById("name").value;
-            alert("Внимательно вводите свое имя, " + name + "!");
-        }
-
         function showChoice() {
             var iceCreamChecked = document.getElementById("iceCream").checked;
             var chocolateChecked = document.getElementById("chocolate").checked;
@@ -26,19 +21,22 @@
         function showThanks() {
             alert("Спасибо, что приняли участие в опросе!");
         }
+    var ice = "вы выбрали мороженое!"
+    var chock = "вы выбрали шоколад!"
+    var waring = "Внимательно вводите имя!"
     </script>
 </head>
 
 <body>
     <form>
         <label for="name">Введите имя:</label>
-        <input type="text" id="name" name="name" required><br>
+        <input type="text" id="name" name="name" onclick="alert(waring)" required><br>
 
         <label for="iceCream">Мороженое:</label>
-        <input type="checkbox" id="iceCream" name="iceCream"><br>
+        <input type="checkbox" id="iceCream" onclick="alert(ice)" name="iceCream"><br>
 
         <label for="chocolate">Шоколад:</label>
-        <input type="checkbox" id="chocolate" name="chocolate"><br>
+        <input type="checkbox" id="chocolate" onclick="alert(chock)" name="chocolate"><br>
 
         <button type="button" onclick="showWarning(); showChoice(); showThanks();">Отправить</button>
     </form>
