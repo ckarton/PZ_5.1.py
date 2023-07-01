@@ -1,8 +1,8 @@
 // Вариант 22: Создать одномерный массив на семь элементов. Найти произведение элементов массива. Результат вывести в консоль.
-var array = [2, 3, 5, 7, 11, 13, 17];
-var product = 1;
+let array = [2, 3, 5, 7, 11, 13, 17];
+let product = 1;
 
-for (var i = 0; i < array.length; i++) {
+for (let i = 0; i < array.length; i++) {
     product *= array[i];
 }
 
